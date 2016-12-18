@@ -6,8 +6,11 @@ fun main(args: Array<String>) {
     foo1()
     println()
     foo2()
+    println()
+    println(breaktest())
 }
 
+/*跳转到循环的下一次迭代*/
 fun jumps(): Int {
     var count = 0
     loop@ for (i in 1..10) {
@@ -20,6 +23,7 @@ fun jumps(): Int {
     return count
 }
 
+/*结束最近的闭合循环*/
 fun foo() {
     val ints = listOf(1, 2, 3)
 
@@ -45,4 +49,18 @@ fun foo2() {
         if (it == 1) return@forEach
         println(it)
     }
+}
+
+/*跳转标签后面的表达式*/
+fun breaktest(): Int {
+    var count = 0
+    loop@ for (i in 1..50) {
+        for (j in 50..100) {
+            if (i > j) {
+                count++
+                break@loop
+            }
+        }
+    }
+    return count
 }
