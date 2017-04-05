@@ -8,9 +8,9 @@ fun main(args: Array<String>) {
     println("one: $one, two: $two")
 
     //map
-    for ((one, two) in rs) {
-        println("$one.$two")
-    }
+    for ((o, t) in rs)
+        println("$o.$t")
+
 }
 
 

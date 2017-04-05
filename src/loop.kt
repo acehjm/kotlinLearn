@@ -1,9 +1,3 @@
-/**
- * 循环
- *
- * @author
- * @date 2016-12-13 20:59
- */
 
 fun main(args: Array<String>) {
 
@@ -59,5 +53,5 @@ fun collections() {
     names
             .sortedBy { it }
             .map{ it.toUpperCase()}
-            .forEach{ print(it) }
+            .forEach(::print)
 }
