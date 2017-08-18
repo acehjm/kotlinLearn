@@ -13,5 +13,5 @@ fun decimalDigitValue(c: Char): Int {
 
 fun arrayInt() {
     val x: IntArray = intArrayOf(1, 2, 3)
-    if (x[2] === x[0] + x[1]) print(true) else print(false)
+    if (x[2] == x[0] + x[1]) print(true) else print(false)
 }

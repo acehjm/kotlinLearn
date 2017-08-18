@@ -15,6 +15,15 @@ fun main(args: Array<String>) {
     my_collection()
     println("------------------")
     my_collection2()
+    println("-------------------")
+    concat()
+}
+
+fun concat() {
+    val list1 = mutableListOf(1, 2, 3)
+    val list2 = mutableListOf(4, 5, 6)
+    list1.addAll(2, list2)
+    println(list1)
 }
 
 fun my_collection2() {

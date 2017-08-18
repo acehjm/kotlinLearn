@@ -1,12 +1,9 @@
-import kotlin.reflect.jvm.internal.impl.javax.inject.Inject
 
 class Attribute {
     var setterVisibilite: String = "abc"
         get
 
     var setterWithAnnotation: Any? = "cc"
-        @Inject set
-
     fun vv() {
         println(Int.MIN_VALUE)
     }

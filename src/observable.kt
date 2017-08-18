@@ -1,4 +1,3 @@
-import kotlin.comparisons.naturalOrder
 import kotlin.properties.Delegates
 
 /*
@@ -10,8 +9,7 @@ import kotlin.properties.Delegates
 * */
 
 class User {
-    var name: String by Delegates.observable("<no name>") {
-        prop, old, new ->
+    var name: String by Delegates.observable("<no name>") { _, old, new ->
         println("$old -> $new")
     }
 }
@@ -20,4 +18,5 @@ fun main(args: Array<String>) {
     val user = User()
     user.name = "java"
     user.name = "Kotlin"
+    user.name = "python"
 }
