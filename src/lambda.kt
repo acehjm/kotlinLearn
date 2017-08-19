@@ -22,3 +22,4 @@ fun html(init: HTML.() -> Unit): HTML {
 val  h = html {   // 带接受者的 Lambda 表达式从这里开始
     body()   // 调用接受者对象上的一个方法
 }
+

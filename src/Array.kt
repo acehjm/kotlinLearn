@@ -5,4 +5,6 @@ fun a(): Array<String> {
 fun main(args: Array<String>) {
     println(a()[2])
     a().forEach(::println)
+
+    println("contentToString: ${arrayOf("a", "b", "a", "c").joinToString("")}")
 }

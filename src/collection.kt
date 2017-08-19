@@ -17,6 +17,10 @@ fun main(args: Array<String>) {
     my_collection2()
     println("-------------------")
     concat()
+    println("-------------------")
+    minofmaxof()
+    println("-------------------")
+    alist()
 }
 
 fun concat() {
@@ -39,4 +43,21 @@ fun my_collection2() {
 
     val item = rwList.firstOrNull()
     println(item)
+}
+
+fun minofmaxof() {
+    val list1 = listOf("a", "b")
+    val list2 = listOf("x", "y", "z")
+    val minSize = minOf(list1.size, list2.size)
+    val longestList = maxOf(list1, list2, compareBy { it.size })
+
+    println("minSize = $minSize")
+    println("longestList = $longestList")
+}
+
+fun alist() {
+    val squares = List(10) { index -> index * index }
+    val mutable = MutableList(10) { 1 }
+    println("squares: $squares")
+    println("mutable: $mutable")
 }

@@ -8,4 +8,8 @@ fun main(args: Array<String>) {
     val map2 = mapOf(1 to "a", 2 to "b", 3 to "c")
     map2.plus(5 to "e")
     for ((k, v) in map2) println("$k -> $v")
+
+    println("-------------")
+    println("minus: ${map1.minus("b")}")
+
 }
