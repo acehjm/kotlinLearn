@@ -9,7 +9,7 @@ fun <T, R> List<T>.mymap(transform: (T) -> R): List<R> {
     return this.map { transform(it) }
 }
 
-fun <T> mymax(collection: Collection<T>, less: (T, T) -> Boolean): T? {
+inline fun <T> mymax(collection: Collection<T>, less: (T, T) -> Boolean): T? {
     var max: T? = null
     for (c in collection)
         if (max == null || less(max, c))
