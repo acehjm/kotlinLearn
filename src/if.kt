@@ -1,6 +1,9 @@
 fun main(args: Array<String>) {
     println(foo(4))
     println(arrOfMinusOnes(8).get(4))
+
+    val ss = mutableListOf<String>()
+    println(ss.maxBy { it.length })
 }
 
 fun foo(param: Int): String {
