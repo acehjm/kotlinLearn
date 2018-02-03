@@ -18,4 +18,10 @@ fun main(args: Array<String>) {
     println("FALSE: ${regex2.matches("0")}")
     println("----------------------")
     println("TRUE: ${regex2.matches("000")}")
+
+    println("************************")
+    val number = "^\\d{1,3}$".toRegex()
+    println("TRUE: ${number.matches("8")}")
+    println("TRUE: ${number.matches("17")}")
+    println("FALSE: ${number.matches("ITEM0")}")
 }
